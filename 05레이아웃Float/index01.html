@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .abox{
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid #777;
+           
+            /*2번째 방법 - 오버플로우 히든*/
+            /* overflow: hidden; */
+        }
+
+        /**/
+        /* 1번째 방법 - 부모요소에 after */
+        .abox::after{ content: ""; display: block; clear: both;}
+
+        .abox .item {
+            border: 1px solid #777;
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+        }
+    </style>
+    <style>
+        .bbox{
+            border: 1px solid #777;
+            margin: 0 auto;
+            width: 500px;
+            overflow: hidden; /*일단 넣고생각해라*/
+        }
+
+        .bbox .left {float: left;}
+        .bbox .left2 {float: left;}
+        .bbox .right{float: right;}
+
+    </style>
+
+</head>
+<body>
+    <div class="abox">
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+        <div class="item">상자</div>                
+    </div>
+
+    <div class="bbox">
+        <div class="left">왼쪽</div>
+        <div class="right">오른쪽</div>
+        <div class="left2">왼쪽2</div>
+
+        <div style="clear: both;">더 이상 플롯의 영향을 받지않도록함.</div>
+
+    </div>
+
+    <hr>
+
+    <!-- 메뉴를 float을 정확히 5등분해봐라 -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul, li, ol,dd,dl {
+        list-style: none;
+
+       }
+
+        .cbox{
+            width: 500px;
+            border: 1px solid #777;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .cbox .item{
+            width: 20%;
+            border: 1px solid #777;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+
+        }
+        .cbox .item a {
+            text-decoration: none;
+            color: black;
+            
+
+        }
+    </style>
+    <ul class="cbox">
+        <li class="item"><a href="#">메뉴</a></li>
+        <li class="item"><a href="#">메뉴</a></li>
+        <li class="item"><a href="#">메뉴</a></li>
+        <li class="item"><a href="#">메뉴</a></li>
+        <li class="item"><a href="#">메뉴</a></li>
+        
+    </ul>
+
+
+
+
+
+
+
+</body>
+</html>

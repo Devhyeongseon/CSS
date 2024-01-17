@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 1px solid #777;
+            /*최소크기 아래로는 줄지않는다. 300이상은 가변으로 늘어난다.*/
+            /* min-width: 300px;
+            min-height: 300px; */
+
+            /*300px이상으로는 커지지않습니닷. 300이하는 가변으로 줄어든다.*/
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+        .box-content {
+            text-align: center;
+            border: 1px solid #777;
+            width: 300px;
+            padding: 0px 20px;
+
+            /* box-sizing: content-box; 박스너비 계산식 = 너비 +패딩 + 윤곽 */
+            box-sizing: border-box; /*패딩 + 윤곽을 너비에 포함시킨다.*/
+        }
+    </style>
+
+
+</head>
+<body>
+    <p>        
+       안녕
+    </p>
+    <div class="box-content">
+        박스너비 = 너비 + 패딩 + 윤곽 <br>
+        상자크기가 변합니다.
+    </div>
+    
+</body>
+</html>

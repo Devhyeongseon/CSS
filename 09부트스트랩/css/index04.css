@@ -1,0 +1,7 @@
+/* 부트스트랩에서 box를 하나만 사용해서 가운데 정렬하려면, float 해제하면 됩니다 */
+.join-style {
+    margin: 0 auto;
+    float: none;
+    box-shadow: 0 8px 16px rgb(0,0,0, 0.3);
+    padding: 30px;
+}

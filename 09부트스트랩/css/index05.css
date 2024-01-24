@@ -83,3 +83,21 @@ select {
     height: 60px;
     font-size: 18px;
 }
+
+/*=========탭디자인========*/
+.mytab > li {
+    width: 25%;
+}
+.mytab > li > a {
+    color: #000;
+    text-align: center;
+    border-color: 1px solid #e3e3e3;
+    margin: 0;
+    border-radius: 0;
+}
+
+.nav-tabs > li.active>a,
+.nav-tabs > li.active>a:focus,
+.nav-tabs > li.active>a:hover{
+    color: red;
+}
